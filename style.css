@@ -1,0 +1,122 @@
+video {
+  position: fixed;
+  top: 50%; /* Ensure the video is centered */
+  left: 50%; /* Ensure the video is centered */
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover; /* New property to cover the background */
+  transform: translate(-50%, -50%); /* Center the video */
+  z-index: -1;
+}
+
+/* Prevent horizontal scrolling */
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  flex-direction: column; /* Added to stack content vertically */
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  border-radius: 10px;
+  text-align: center;
+  border: 2px solid aqua;
+}
+.content h1 {
+  color: tomato;
+  font-style: oblique;
+}
+.content input {
+  border-radius: 5px;
+  width: 80%; /* Adjust width for responsiveness */
+  max-width: 300px;
+  border: 2px solid aqua; /* New border style */
+  padding: 8px;
+  margin-top: 10px;
+  background: none;
+  color: aqua;
+  background-image: url("map.png");
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  background-size: 20px;
+}
+.content button {
+  border-radius: 5px;
+  margin: 20px;
+  border: 2px solid aqua; /* New border style */
+  padding: 8px 16px; /* Adjust padding for better spacing */
+  cursor: pointer;
+  background: none;
+  color: aqua;
+}
+.content button:hover {
+  background-color: #007BFF;
+  color: white;
+}
+.content #weatherDisplay {
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+/* Added footer styles */
+footer {
+  width: 100%;
+  padding: 10px 0;
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  text-align: center;
+  color: white;
+  position: absolute; /* Ensures the footer stays at the bottom */
+  bottom: 0;
+  left: 0; /* Ensures the footer spans the full width */ /* Highlighted change */
+  right: 0; /* Ensures the footer spans the full width */ /* Highlighted change */
+  margin: 0; /* Removes any default margin */ /* Highlighted change */
+  padding: 0; /* Removes any default padding */ /* Highlighted change */
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .content {
+    padding: 15px;
+  }
+  input {
+    width: 90%; /* Ensure input and button take full width on smaller screens */
+  }
+}
+@media (max-width: 480px) {
+  .content {
+    padding: 10px;
+  }
+  h1 {
+    font-size: 1.5rem; /* Adjust font size for smaller screens */
+  }
+  input {
+    width: 100%; /* Ensure input and button take full width on the smallest screens */
+  }
+  button {
+    padding: 10px;
+    width: 90%;
+  }
+  #weatherDisplay {
+    font-size: 18px;
+  }
+}/*# sourceMappingURL=style.css.map */
