@@ -91,10 +91,10 @@ footer {
     color: white;
     position: absolute;/* Ensures the footer stays at the bottom */
     bottom: 0;
-    left: 0; /* Ensures the footer spans the full width */ /* Highlighted change */
-    right: 0; /* Ensures the footer spans the full width */ /* Highlighted change */
-    margin: 0; /* Removes any default margin */ /* Highlighted change */
-    padding: 0; /* Removes any default padding */ /* Highlighted change */
+    left: 0; /* Ensures the footer spans the full width */ 
+    right: 0; /* Ensures the footer spans the full width */ 
+    margin: 0; /* Removes any default margin */ 
+    padding: 0; /* Removes any default padding */ 
 }
 
 /* Media queries for responsiveness */
@@ -129,4 +129,41 @@ footer {
     #weatherDisplay {
         font-size: 18px;
     }
+}
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    footer {
+        padding: 5px;
+        position: absolute;
+        overflow: hidden;
+        position: fixed;
+        
+    }
+    
+    body{
+        overflow-x: hidden; /* Prevent horizontal scrolling */
+    }
+}
+
+@media (max-width: 480px) {
+    .content {
+        padding: 5px;
+    }
+    input{
+        width: 50%;
+    }
+    button{
+        width: 30%;
+    }
+    footer {
+        padding: 2px;
+        font-size: 0.8rem;
+        position: absolute;
+        overflow: hidden;
+        position: fixed;
+    }
+    body{
+        overflow-x: hidden; /* Prevent horizontal scrolling */
+    }
+    
 }
